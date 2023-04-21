@@ -1,5 +1,5 @@
-#ifndef TAG_LINE_H
-#define TAG_LINE_H
+#ifndef T5N8_H
+#define T5N8_H
 
 #include "common.h"
 #include "Label.h"
@@ -7,12 +7,12 @@
 #include "parameters.h"
 
 //строка текста
-class TTagLine : public TVisualObject {
+class T5N8 : public TVisualObject {
 public:
     virtual bool ProcessMessage(TMessage* m);
     virtual const u16 getHeight(void);
-    TTagLine(std::string caption, std::string tag, TLabelInitStructure init);//конструктор
-    ~TTagLine();//деструктор
+    T5N8(std::string caption, std::string tag, TLabelInitStructure init);//конструктор
+    ~T5N8();//деструктор
     void view(void);//вывести строку на экране
     TLabel* Value;
     const std::string Tag;

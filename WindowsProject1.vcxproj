@@ -165,7 +165,7 @@
     <ClCompile Include="MCU\Components\Label.cpp" />
     <ClCompile Include="MCU\Components\LinkLabel.cpp" />
     <ClCompile Include="MCU\Components\Pages.cpp" />
-    <ClCompile Include="MCU\Components\TagLine.cpp" />
+    <ClCompile Include="MCU\Components\T5N8.cpp" />
     <ClCompile Include="MCU\Components\TComponentsContainer.cpp" />
     <ClCompile Include="MCU\Components\TVerticalContainer.cpp" />
     <ClCompile Include="MCU\DevicePollManager\DevicePollManager.cpp" />

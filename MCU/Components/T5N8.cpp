@@ -1,15 +1,15 @@
-#include "TagLine.h"
+#include "T5N8.h"
 #include "IniResources.h"
 
-bool TTagLine::ProcessMessage(TMessage* m) {
+bool T5N8::ProcessMessage(TMessage* m) {
     return false;
 }
 
-const std::string TTagLine::ComponentName() {
+const std::string T5N8::ComponentName() {
     return "TTagLine";
 }
 
-TTagLine::TTagLine(std::string caption, std::string tag, TLabelInitStructure init)
+T5N8::T5N8(std::string caption, std::string tag, TLabelInitStructure init)
     : Caption(new TLabel(init))
     , Value(new TLabel(init))
     , msu(new TLabel(init))
@@ -19,18 +19,18 @@ TTagLine::TTagLine(std::string caption, std::string tag, TLabelInitStructure ini
     Value->setCaption(((TParameter*)DataSrc)->getDefaultValue());
 }
 
-TTagLine::~TTagLine() {
+T5N8::~T5N8() {
     delete Caption;
     delete Value;
     delete msu;
 }
 
-const u16 TTagLine::getHeight(void) {
+const u16 T5N8::getHeight(void) {
     TTextSizes tsizes = Caption->getSize();
     return tsizes.height;
 }
 
-void TTagLine::view(void) {
+void T5N8::view(void) {
     Caption->inFocus = inFocus;
     Caption->ElementRect.Top = ElementRect.Top;
     Caption->ElementRect.Left = ElementRect.Left;

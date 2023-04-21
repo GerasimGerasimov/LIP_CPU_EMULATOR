@@ -1,6 +1,6 @@
 #include "PageHome.h"
 #include "Router.h"
-#include "TagLine.h"
+#include "T5N8.h"
 #include <IniResources.h>
 
 void TPageHome::view() {
@@ -19,34 +19,6 @@ void TPageHome::startToClose() {
 }
 
 bool TPageHome::ProcessMessage(TMessage* m) {
-    TVisualObject* e = { nullptr };
-    switch (m->Event) {
-        case (u32)EventSrc::KEYBOARD: {
-            switch (m->p1) {
-                case (u32)KeyCodes::ESC:
-                    TRouter::setTask({ false, "MainMenu", nullptr });
-                    break;
-                case (u32)KeyCodes::F1:
-                    e = getSignalOfFocusedChild();
-                    if (e) {
-                        ISignal* p = IniResources::getSignalByTag(((TTagLine*)(e))->Tag);
-                        TRouter::PageValueEditEntryData.backPage = Name;
-                        TRouter::setTask({ false, "Help", p });
-                    }
-                    break;
-                case (u32)KeyCodes::ENT:
-                    e = getSignalOfFocusedChild();
-                    if (e) {
-                        TRouter::PageValueEditEntryData.tag = ((TTagLine*)(e))->Tag;
-                        TRouter::PageValueEditEntryData.value = ((TTagLine*)(e))->Value->getCaption();
-                        TRouter::PageValueEditEntryData.backPage = Name;
-                        TRouter::setTask({ false, "EditValue", nullptr });
-                    }
-                    break;
-            }
-        }
-    }
-
     for (auto& element : List) {
         element->ProcessMessage(m);
     }
@@ -62,6 +34,13 @@ TVisualObject* TPageHome::getSignalOfFocusedChild() {
     return nullptr;
 }
 
+/* TODO в таком виде хранится информация о наполнении страницы
+1, 5N, PF1, U1/RAM/Iexc,
+2, 5N, MA2, U1/RAM/Uexc,
+3, 5N, NF0, U1/RAM/Ist,
+4, 5N, PF1, U1/RAM/Q,
+*/
+
 void TPageHome::fillPageContainer(void) {
     TagList->Clear();
     TLabelInitStructure LabelInit;
@@ -69,12 +48,10 @@ void TPageHome::fillPageContainer(void) {
     LabelInit.Rect = { 10, 10, 10, 10 };
     LabelInit.focused = false;
     TagList->AddList({
-        new TTagLine("Uref", "U1/RAM/Uref/", LabelInit),
-        new TTagLine("Iref", "U1/RAM/Iref/", LabelInit),
-        new TTagLine("UoutAve", "U1/RAM/UoutAve/", LabelInit),
-        new TTagLine("IoutAve", "U1/RAM/IoutAve/", LabelInit),
-        new TTagLine("SpReq", "U1/RAM/SparkFrq/", LabelInit),
-        new TTagLine("Out", "U1/RAM/Out/", LabelInit),
+        new T5N8("PF1", "U1/RAM/Uref/", LabelInit),
+        new T5N8("MA2", "U1/RAM/Iref/", LabelInit),
+        new T5N8("NF0", "U1/RAM/UoutAve/", LabelInit),
+        new T5N8("PF2", "U1/RAM/IoutAve/", LabelInit),
     });
 }
 
@@ -87,7 +64,7 @@ TPageHome::TPageHome(std::string Name)
 
 void TPageHome::SlotUpdate(TSlotHandlerArsg args) {
     for (auto& e : TagList->List) {
-        TTagLine* tag = (TTagLine*)e;
+        T5N8* tag = (T5N8*)e;
         TParameter* p = (TParameter*)tag->getDataSrc();
         tag->Value->setCaption(p->getValue(args, ""));
     }
