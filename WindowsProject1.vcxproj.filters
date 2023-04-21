@@ -182,9 +182,6 @@
     <ClCompile Include="MCU\Pages\Home\PageHome.cpp">
       <Filter>MCU\Pages</Filter>
     </ClCompile>
-    <ClCompile Include="MCU\Components\LinkedTagLabel.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
     <ClCompile Include="Drivers\com_master_driver.cpp">
       <Filter>Divers</Filter>
     </ClCompile>
