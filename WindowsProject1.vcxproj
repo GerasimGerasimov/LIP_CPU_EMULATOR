@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{aefecf6a-699f-4cf7-bc28-7c186ea6d4df}</ProjectGuid>
+    <RootNamespace>WindowsProject1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>DisplayEmulator</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)MCU\CmdSender;$(ProjectDir)MCU\SetValueSelector;$(ProjectDir)MCU\Modbus;$(ProjectDir)MCU\StateControllers;$(ProjectDir)MCU\StateControllers\Warnings;$(ProjectDir)MCU\StateControllers\Alarms;$(ProjectDir)MCU\DevicesValues;$(ProjectDir)MCU\ini;$(ProjectDir)MCU\IDrivers;$(ProjectDir)MCU\Parameters;$(ProjectDir)MCU\Resources;$(ProjectDir)MCU\Slots;$(ProjectDir)MCU\Helpers;$(ProjectDir)MCU\DevicePollManager;$(ProjectDir)MCU\GraphicsFunctions;$(ProjectDir)WinAppPages;$(ProjectDir)MCU\Events;$(ProjectDir)MCU\Msg;$(ProjectDir)MCU\Components;$(ProjectDir)threads;$(ProjectDir)MCU\Pages\;$(ProjectDir)MCU\Pages\Help;$(ProjectDir)MCU\Pages\Alarms;$(ProjectDir)MCU\Pages\Home;$(ProjectDir)MCU\Pages\BrandNewHome;$(ProjectDir)MCU\Pages\BasicSettings;$(ProjectDir)MCU\Pages\OperateStatus;$(ProjectDir)MCU\Pages\EditValue;$(ProjectDir)MCU\Pages\ParameterListEdit;$(ProjectDir)MCU\Pages\MainMenu;$(ProjectDir)MCU\Pages\Warning;$(ProjectDir)MCU\Pages\BasicProtectionsSettings;$(ProjectDir)MCU\Pages\CleanSettings;$(ProjectDir)MCU\Pages\Sensors;$(ProjectDir)MCU\Pages\NetworkSettings;$(ProjectDir)MCU\Pages\PanelSettings;$(ProjectDir)MCU\Pages\Calibration;$(ProjectDir)MCU\Router;$(ProjectDir)MCU\App;$(ProjectDir)Drivers\Leds\Alarm;$(ProjectDir)Drivers\Leds\Warning;$(ProjectDir)Drivers\Keyboard;$(ProjectDir)Drivers\Resources;$(ProjectDir)Drivers\DIN;$(ProjectDir)Drivers\DOUT;$(ProjectDir)Drivers\MemWrite;$(ProjectDir)Drivers;$(ProjectDir)MCU\Fonts;$(ProjectDir)UserData;$(ProjectDir)IntmashLib;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)MCU\CmdSender;$(ProjectDir)MCU\SetValueSelector;$(ProjectDir)MCU\Modbus;$(ProjectDir)MCU\StateControllers;$(ProjectDir)MCU\StateControllers\Warnings;$(ProjectDir)MCU\StateControllers\Alarms;$(ProjectDir)MCU\DevicesValues;$(ProjectDir)MCU\ini;$(ProjectDir)MCU\IDrivers;$(ProjectDir)MCU\Parameters;$(ProjectDir)MCU\Resources;$(ProjectDir)MCU\Slots;$(ProjectDir)MCU\Helpers;$(ProjectDir)MCU\DevicePollManager;$(ProjectDir)MCU\GraphicsFunctions;$(ProjectDir)WinAppPages;$(ProjectDir)MCU\Events;$(ProjectDir)MCU\Msg;$(ProjectDir)MCU\Components;$(ProjectDir)threads;$(ProjectDir)MCU\Pages\;$(ProjectDir)MCU\Pages\Help;$(ProjectDir)MCU\Pages\Alarms;$(ProjectDir)MCU\Pages\Home;$(ProjectDir)MCU\Pages\BrandNewHome;$(ProjectDir)MCU\Pages\BasicSettings;$(ProjectDir)MCU\Pages\OperateStatus;$(ProjectDir)MCU\Pages\EditValue;$(ProjectDir)MCU\Pages\ParameterListEdit;$(ProjectDir)MCU\Pages\MainMenu;$(ProjectDir)MCU\Pages\Warning;$(ProjectDir)MCU\Pages\BasicProtectionsSettings;$(ProjectDir)MCU\Pages\CleanSettings;$(ProjectDir)MCU\Pages\Sensors;$(ProjectDir)MCU\Pages\NetworkSettings;$(ProjectDir)MCU\Pages\PanelSettings;$(ProjectDir)MCU\Pages\Calibration;$(ProjectDir)MCU\Router;$(ProjectDir)MCU\App;$(ProjectDir)Drivers\Leds\Alarm;$(ProjectDir)Drivers\Leds\Warning;$(ProjectDir)Drivers\Keyboard;$(ProjectDir)Drivers\Resources;$(ProjectDir)Drivers\DIN;$(ProjectDir)Drivers\DOUT;$(ProjectDir)Drivers\MemWrite;$(ProjectDir)Drivers;$(ProjectDir)MCU\Fonts;$(ProjectDir)UserData;$(ProjectDir)IntmashLib;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="MainPage.h" />
+    <ClInclude Include="MCU\Events\Events.hpp" />
+    <ClInclude Include="MCU\IDrivers\icommastert.h" />
+    <ClInclude Include="MCU\IDrivers\iresources.h" />
+    <ClInclude Include="MCU\Modbus\modbus.h" />
+    <ClInclude Include="MCU\Slots\SlotHandlerType.h" />
+    <ClInclude Include="MCU\StateControllers\StateControllers.h" />
+    <ClInclude Include="MCU\TODO.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WindowsProject1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Drivers\com_master_driver.cpp" />
+    <ClCompile Include="Drivers\DIN\internal_din.cpp" />
+    <ClCompile Include="Drivers\display_driver.cpp" />
+    <ClCompile Include="Drivers\DOUT\internal_dout.cpp" />
+    <ClCompile Include="Drivers\Keyboard\virtualKeyEvents.cpp" />
+    <ClCompile Include="Drivers\Leds\Alarm\LedAlarms.cpp" />
+    <ClCompile Include="Drivers\Leds\Warning\LedWarnings.cpp" />
+    <ClCompile Include="Drivers\MemWrite\MemWrite.cpp" />
+    <ClCompile Include="Drivers\Resources\os_resources.cpp" />
+    <ClCompile Include="MCU\App\app.cpp" />
+    <ClCompile Include="MCU\CmdSender\CmdSender.cpp" />
+    <ClCompile Include="MCU\Components\common.cpp" />
+    <ClCompile Include="MCU\Components\FixedFooter.cpp" />
+    <ClCompile Include="MCU\Components\FixedHeader.cpp" />
+    <ClCompile Include="MCU\Components\HeaderLabel.cpp" />
+    <ClCompile Include="MCU\Components\Label.cpp" />
+    <ClCompile Include="MCU\Components\LinkedTagLabel.cpp" />
+    <ClCompile Include="MCU\Components\LinkLabel.cpp" />
+    <ClCompile Include="MCU\Components\NumericEdit.cpp" />
+    <ClCompile Include="MCU\Components\Pages.cpp" />
+    <ClCompile Include="MCU\Components\ParamListSelector.cpp" />
+    <ClCompile Include="MCU\Components\TagLine.cpp" />
+    <ClCompile Include="MCU\Components\TComponentListVertical.cpp" />
+    <ClCompile Include="MCU\Components\TComponentsContainer.cpp" />
+    <ClCompile Include="MCU\Components\TVerticalContainer.cpp" />
+    <ClCompile Include="MCU\Components\ValueVerticalDiagram.cpp" />
+    <ClCompile Include="MCU\Components\WrappedText.cpp" />
+    <ClCompile Include="MCU\DevicePollManager\DevicePollManager.cpp" />
+    <ClCompile Include="MCU\DevicePollManager\Slot.cpp" />
+    <ClCompile Include="MCU\DevicesValues\DevicesValuesHandler.cpp" />
+    <ClCompile Include="MCU\DevicesValues\HandleSubscribers.cpp" />
+    <ClCompile Include="MCU\Fonts\MSSansSerifBold14.cpp" />
+    <ClCompile Include="MCU\Fonts\TMCUFonts.cpp" />
+    <ClCompile Include="MCU\Fonts\TMCUText.cpp" />
+    <ClCompile Include="MCU\Fonts\Verdana12.cpp" />
+    <ClCompile Include="MCU\GraphicsFunctions\graphics.cpp" />
+    <ClCompile Include="MCU\Helpers\crc16.c" />
+    <ClCompile Include="MCU\Helpers\utils.cpp" />
+    <ClCompile Include="MCU\ini\IniResources.cpp" />
+    <ClCompile Include="MCU\ini\IniSlotsProps.cpp" />
+    <ClCompile Include="MCU\ini\parser.cpp" />
+    <ClCompile Include="MCU\Modbus\AppModbusSlave.cpp" />
+    <ClCompile Include="MCU\Msg\msg.cpp" />
+    <ClCompile Include="MCU\Pages\Alarms\PageAlarms.cpp" />
+    <ClCompile Include="MCU\Pages\BasicProtectionsSettings\PageBasicProtectionsSettings.cpp" />
+    <ClCompile Include="MCU\Pages\BasicSettings\PageBasicSettings.cpp" />
+    <ClCompile Include="MCU\Pages\BrandNewHome\PageBrandNewHome.cpp" />
+    <ClCompile Include="MCU\Pages\Calibration\PageCalibration.cpp" />
+    <ClCompile Include="MCU\Pages\CleanSettings\PageCleanSettings.cpp" />
+    <ClCompile Include="MCU\Pages\EditValue\PageEditValue.cpp" />
+    <ClCompile Include="MCU\Pages\Help\PageHelp.cpp" />
+    <ClCompile Include="MCU\Pages\Home\PageHome.cpp" />
+    <ClCompile Include="MCU\Pages\MainMenu\PageMainMenu.cpp" />
+    <ClCompile Include="MCU\Pages\NetworkSettings\PageNetworkSettings.cpp" />
+    <ClCompile Include="MCU\Pages\OperateStatus\PageOperateStatus.cpp" />
+    <ClCompile Include="MCU\Pages\PanelSettings\PagePanelSettings.cpp" />
+    <ClCompile Include="MCU\Pages\ParameterListEdit\PageParameterListEdit.cpp" />
+    <ClCompile Include="MCU\Pages\Sensors\PageSensors.cpp" />
+    <ClCompile Include="MCU\Pages\Warning\PageWarnings.cpp" />
+    <ClCompile Include="MCU\Parameters\generalcase.cpp" />
+    <ClCompile Include="MCU\Parameters\inistring.cpp" />
+    <ClCompile Include="MCU\Parameters\parameters.cpp" />
+    <ClCompile Include="MCU\Parameters\ParametersUtils.cpp" />
+    <ClCompile Include="MCU\Parameters\scaleutils.cpp" />
+    <ClCompile Include="MCU\Parameters\signal.cpp" />
+    <ClCompile Include="MCU\Parameters\signalfactory.cpp" />
+    <ClCompile Include="MCU\Parameters\TBit.cpp" />
+    <ClCompile Include="MCU\Parameters\TFloat.cpp" />
+    <ClCompile Include="MCU\Parameters\TPrmList.cpp" />
+    <ClCompile Include="MCU\Parameters\TS16bit.cpp" />
+    <ClCompile Include="MCU\Parameters\TU16bit.cpp" />
+    <ClCompile Include="MCU\Parameters\TU8BIT.cpp" />
+    <ClCompile Include="MCU\Parameters\vars.cpp" />
+    <ClCompile Include="MCU\Resources\resources.cpp" />
+    <ClCompile Include="MCU\Router\Router.cpp" />
+    <ClCompile Include="MCU\SetValueSelector\SetValueSelector.cpp" />
+    <ClCompile Include="MCU\Slots\CommonSlotHandler.cpp" />
+    <ClCompile Include="MCU\Slots\CreateCustomSlot.cpp" />
+    <ClCompile Include="MCU\Slots\CreateSlotsByStart.cpp" />
+    <ClCompile Include="MCU\StateControllers\Alarms\Alarms.cpp" />
+    <ClCompile Include="MCU\StateControllers\Warnings\Warnings.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="threads\mcu_main_thread.cpp" />
+    <ClCompile Include="threads\mutexes.cpp" />
+    <ClCompile Include="UserData\flashdata.c" />
+    <ClCompile Include="UserData\ramdata.c" />
+    <ClCompile Include="WinAppPages\consolelog.cpp" />
+    <ClCompile Include="WinAppPages\livecontrol.c" />
+    <ClCompile Include="WinAppPages\MainPage.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowsProject1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="WindowsProject1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

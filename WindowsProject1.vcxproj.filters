@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WinAppPages">
+      <UniqueIdentifier>{566d9270-51f0-4504-bf92-084a54c4ad31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Divers">
+      <UniqueIdentifier>{4a5f3fa7-b023-4fb2-b8b7-c6a413b0815b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threads">
+      <UniqueIdentifier>{d1a86d8d-1491-41a8-b6d4-b4954868ded8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IDrivers">
+      <UniqueIdentifier>{61dcc384-7cf6-4a39-bde8-a3cd2b95a01d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserData">
+      <UniqueIdentifier>{f1dfdf42-358d-4037-80e5-75da2e8fd82a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Divers\Keyboard">
+      <UniqueIdentifier>{5a98d625-d2f2-4b0c-99c1-e2c5178431d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU">
+      <UniqueIdentifier>{18a44d6d-522c-443d-8d7a-07edd9793d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Pages">
+      <UniqueIdentifier>{bc54e06b-1d64-4b26-88e8-2b79f2bb32fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Components">
+      <UniqueIdentifier>{f211afa4-167b-4f8c-8393-20fb79c2383b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Fonts">
+      <UniqueIdentifier>{89b8feb4-48c4-4228-93b5-13ea6c338119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\GraphicsFunstions">
+      <UniqueIdentifier>{4fdaf7f8-6d44-472f-82f5-bf8928236b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Msg">
+      <UniqueIdentifier>{acaf84c6-fbb1-45ed-a82a-8635dc2fe6e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Router">
+      <UniqueIdentifier>{72e87f74-fc12-428a-897b-4d6098a45f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Events">
+      <UniqueIdentifier>{1d9a565b-0403-4ee4-986a-1fa4da92f80f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\DevicePollManager">
+      <UniqueIdentifier>{e5620a45-34f1-4e71-a3f5-793e9225b67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Helpers">
+      <UniqueIdentifier>{fa29a129-4ff5-4d17-b13a-c48df751cb29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Resources">
+      <UniqueIdentifier>{238f6125-5931-4c87-a9f2-15cda37161c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Slots">
+      <UniqueIdentifier>{67b38ad9-60be-491b-bd07-a2463cdf03f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\ini">
+      <UniqueIdentifier>{80439ef1-861a-4819-8caa-424839095942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Parameters">
+      <UniqueIdentifier>{052a905e-f692-4edd-ba1c-1b59c38c94b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Modbus">
+      <UniqueIdentifier>{d09c1025-bfce-457b-93de-cb3ae02d9804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\DevicesValues">
+      <UniqueIdentifier>{c577d28a-ac74-40fd-9769-dd9980121259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MCU\Alarms">
+      <UniqueIdentifier>{ae43b80b-0817-4d84-bc4a-d87c9724f406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Divers\Leds">
+      <UniqueIdentifier>{566b1f77-bd9d-48e3-bcce-07acbffcfa28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Divers\Leds\Alarm">
+      <UniqueIdentifier>{4d5f0476-f2d5-47e5-961a-49850e21d8b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsProject1.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MainPage.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\Events\Events.hpp">
+      <Filter>MCU\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\IDrivers\icommastert.h">
+      <Filter>IDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\IDrivers\iresources.h">
+      <Filter>IDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\Modbus\modbus.h">
+      <Filter>MCU\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\Slots\SlotHandlerType.h">
+      <Filter>MCU\Slots</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\StateControllers\StateControllers.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MCU\TODO.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="WinAppPages\MainPage.cpp">
+      <Filter>WinAppPages</Filter>
+    </ClCompile>
+    <ClCompile Include="WinAppPages\consolelog.cpp">
+      <Filter>WinAppPages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\common.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Fonts\MSSansSerifBold14.cpp">
+      <Filter>MCU\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Fonts\Verdana12.cpp">
+      <Filter>MCU\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Fonts\TMCUFonts.cpp">
+      <Filter>MCU\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Fonts\TMCUText.cpp">
+      <Filter>MCU\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\display_driver.cpp">
+      <Filter>Divers</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\GraphicsFunctions\graphics.cpp">
+      <Filter>MCU\GraphicsFunstions</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Msg\msg.cpp">
+      <Filter>MCU\Msg</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\App\app.cpp">
+      <Filter>MCU</Filter>
+    </ClCompile>
+    <ClCompile Include="threads\mutexes.cpp">
+      <Filter>Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="threads\mcu_main_thread.cpp">
+      <Filter>Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\Label.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\TComponentsContainer.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\MainMenu\PageMainMenu.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\LinkLabel.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Router\Router.cpp">
+      <Filter>MCU\Router</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\EditValue\PageEditValue.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\Pages.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Home\PageHome.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\LinkedTagLabel.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\com_master_driver.cpp">
+      <Filter>Divers</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\DevicePollManager\DevicePollManager.cpp">
+      <Filter>MCU\DevicePollManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Helpers\crc16.c">
+      <Filter>MCU\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\DevicePollManager\Slot.cpp">
+      <Filter>MCU\DevicePollManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Resources\resources.cpp">
+      <Filter>MCU\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\Resources\os_resources.cpp">
+      <Filter>MCU\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Helpers\utils.cpp">
+      <Filter>MCU\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\ini\parser.cpp">
+      <Filter>MCU\ini</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\ini\IniResources.cpp">
+      <Filter>MCU\ini</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\parameters.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\vars.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\inistring.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\signal.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\ini\IniSlotsProps.cpp">
+      <Filter>MCU\ini</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Slots\CreateSlotsByStart.cpp">
+      <Filter>MCU\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Slots\CommonSlotHandler.cpp">
+      <Filter>MCU\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\DevicesValues\DevicesValuesHandler.cpp">
+      <Filter>MCU\DevicesValues</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\signalfactory.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TU16bit.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TBit.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TS16bit.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TFloat.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Help\PageHelp.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\TagLine.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\generalcase.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TU8BIT.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\ParametersUtils.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\DevicesValues\HandleSubscribers.cpp">
+      <Filter>MCU\DevicesValues</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\scaleutils.cpp">
+      <Filter>MCU\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\WrappedText.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\HeaderLabel.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\NumericEdit.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Slots\CreateCustomSlot.cpp">
+      <Filter>MCU\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="WinAppPages\livecontrol.c">
+      <Filter>WinAppPages</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData\flashdata.c">
+      <Filter>UserData</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\Keyboard\virtualKeyEvents.cpp">
+      <Filter>Divers\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData\ramdata.c">
+      <Filter>UserData</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Modbus\AppModbusSlave.cpp">
+      <Filter>MCU\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\Leds\Alarm\LedAlarms.cpp">
+      <Filter>Divers\Leds\Alarm</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\FixedHeader.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\TVerticalContainer.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\FixedFooter.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\TComponentListVertical.cpp">
+      <Filter>MCU\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\OperateStatus\PageOperateStatus.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Alarms\PageAlarms.cpp">
+      <Filter>MCU\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\StateControllers\Alarms\Alarms.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\StateControllers\Warnings\Warnings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\Leds\Warning\LedWarnings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Warning\PageWarnings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\BasicSettings\PageBasicSettings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\BasicProtectionsSettings\PageBasicProtectionsSettings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\CleanSettings\PageCleanSettings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Sensors\PageSensors.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\NetworkSettings\PageNetworkSettings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Parameters\TPrmList.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\DIN\internal_din.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\CmdSender\CmdSender.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\DOUT\internal_dout.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\ParamListSelector.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\ParameterListEdit\PageParameterListEdit.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\PanelSettings\PagePanelSettings.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\SetValueSelector\SetValueSelector.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers\MemWrite\MemWrite.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\Calibration\PageCalibration.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Pages\BrandNewHome\PageBrandNewHome.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MCU\Components\ValueVerticalDiagram.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowsProject1.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="WindowsProject1.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
