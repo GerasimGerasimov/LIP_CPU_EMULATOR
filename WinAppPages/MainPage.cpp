@@ -5,9 +5,6 @@
 #include "consolelog.h"
 #include "msg.h"
 #include <com_master_driver.h>
-#include "LedAlarms.h"
-#include "LedWarnings.h"
-#include "internal_din.h"
 
 HINSTANCE MainPage::hInst = NULL;                                // текущий экземпляр
 WCHAR MainPage::szTitle[MAX_LOADSTRING];                  // Текст строки заголовка
@@ -98,9 +95,6 @@ void MainPage::fillHandlersByID(void) {
     HDC hdc_dem = GetDC(hwndDisplayEmulator);
     TDisplayDriver::setDC(hdc_dem);
     console::hwnd = hwndMemoLogger = GetDlgItem(hWndMain, ID_MEMO_LOGGER);
-    LedAlarms::init(hWndMain);
-    LedWarnings::init(hWndMain);
-    InternalDIN::init();
     isHadlersFilled = true;
     ComMasterDriver::open();
 }
@@ -133,7 +127,6 @@ LRESULT CALLBACK MainPage::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 
         int wmId = LOWORD(wParam);
         keyBoardControlMCU(wmId);
-        DINControlMCU(wmId);
         // Разобрать выбор в меню:
         switch (wmId)
         {
@@ -169,40 +162,6 @@ LRESULT CALLBACK MainPage::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 }
 
 
-void MainPage::DINControlMCU(int cmd) {
-    switch (LOWORD(cmd)) {
-    case IDC_CHECK_DI0:
-        setDIN(IDC_CHECK_DI0, 0);
-        break;
-    case IDC_CHECK_DI1:
-        setDIN(IDC_CHECK_DI1, 1);
-        break;
-    case IDC_CHECK_DI2:
-        setDIN(IDC_CHECK_DI2, 2);
-        break;
-    case IDC_CHECK_DI3:
-        setDIN(IDC_CHECK_DI3, 3);
-        break;
-    case IDC_CHECK_DI4:
-        setDIN(IDC_CHECK_DI4, 4);
-        break;
-    case IDC_CHECK_DI5:
-        setDIN(IDC_CHECK_DI5, 5);
-        break;
-    }
-    
-}
-
-void MainPage::setDIN(int ID, int input_number) {
-    if (SendDlgItemMessage(hWndMain, ID, BM_GETCHECK, 0, 0)) {
-        InternalDIN::DIN |= (1 << input_number);
-        console::log(L"DIN CHECKED\n");
-    }
-    else {
-        InternalDIN::DIN &= ~(1 << input_number);
-        console::log(L"DIN0 UNCHECKED\n");
-    }
-}
 
 void MainPage::keyBoardControlMCU(int cmd) {
     switch (LOWORD(cmd)) {

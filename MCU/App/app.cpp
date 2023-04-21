@@ -15,11 +15,6 @@
 #include "CreateCustomSlot.h"
 #include "RAMdata.h"
 #include "virtualKeyEvents.h"
-#include "Alarms.h"
-#include "Warnings.h"
-#include "internal_din.h"
-#include "internal_dout.h"
-#include "CmdSender.h"
 
 bool App::init(void) {
     if (!TInternalResources::init()) {
@@ -33,8 +28,6 @@ bool App::init(void) {
     slots.push_back(*CreateCustomSlot::init("U1", "CmdWrite"));
     DevicePollManager::init(slots);
     TRouter::Init();
-    Alarms::init();
-    Warnings::init();
     Msg::send_message((u32)EventSrc::REPAINT, 0, 0);
     return true;
 }
@@ -52,10 +45,6 @@ void App::run(void) {
         TDisplayDriver::out();
         DevicePollManager::execute();
         scanVirtualKeyCode();
-        if (Alarms::isAlarmOnce()) TRouter::setTask({false, "Alarms", nullptr});
-        InternalDIN::update();
-        InternalDOUT::update();
-        CmdSender::update(RAM_DATA.DIO & 0x00FF);
     }
 }
 

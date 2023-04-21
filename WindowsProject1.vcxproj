@@ -149,7 +149,6 @@
     <ClInclude Include="MCU\IDrivers\iresources.h" />
     <ClInclude Include="MCU\Modbus\modbus.h" />
     <ClInclude Include="MCU\Slots\SlotHandlerType.h" />
-    <ClInclude Include="MCU\StateControllers\StateControllers.h" />
     <ClInclude Include="MCU\TODO.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
@@ -157,16 +156,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Drivers\com_master_driver.cpp" />
-    <ClCompile Include="Drivers\DIN\internal_din.cpp" />
     <ClCompile Include="Drivers\display_driver.cpp" />
-    <ClCompile Include="Drivers\DOUT\internal_dout.cpp" />
     <ClCompile Include="Drivers\Keyboard\virtualKeyEvents.cpp" />
-    <ClCompile Include="Drivers\Leds\Alarm\LedAlarms.cpp" />
-    <ClCompile Include="Drivers\Leds\Warning\LedWarnings.cpp" />
     <ClCompile Include="Drivers\MemWrite\MemWrite.cpp" />
     <ClCompile Include="Drivers\Resources\os_resources.cpp" />
     <ClCompile Include="MCU\App\app.cpp" />
-    <ClCompile Include="MCU\CmdSender\CmdSender.cpp" />
     <ClCompile Include="MCU\Components\common.cpp" />
     <ClCompile Include="MCU\Components\FixedFooter.cpp" />
     <ClCompile Include="MCU\Components\FixedHeader.cpp" />
@@ -219,8 +213,6 @@
     <ClCompile Include="MCU\Slots\CommonSlotHandler.cpp" />
     <ClCompile Include="MCU\Slots\CreateCustomSlot.cpp" />
     <ClCompile Include="MCU\Slots\CreateSlotsByStart.cpp" />
-    <ClCompile Include="MCU\StateControllers\Alarms\Alarms.cpp" />
-    <ClCompile Include="MCU\StateControllers\Warnings\Warnings.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="threads\mcu_main_thread.cpp" />
     <ClCompile Include="threads\mutexes.cpp" />

@@ -120,9 +120,6 @@
     <ClInclude Include="MCU\Slots\SlotHandlerType.h">
       <Filter>MCU\Slots</Filter>
     </ClInclude>
-    <ClInclude Include="MCU\StateControllers\StateControllers.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="MCU\TODO.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -299,9 +296,6 @@
     <ClCompile Include="MCU\Modbus\AppModbusSlave.cpp">
       <Filter>MCU\Modbus</Filter>
     </ClCompile>
-    <ClCompile Include="Drivers\Leds\Alarm\LedAlarms.cpp">
-      <Filter>Divers\Leds\Alarm</Filter>
-    </ClCompile>
     <ClCompile Include="MCU\Components\FixedHeader.cpp">
       <Filter>MCU\Components</Filter>
     </ClCompile>
@@ -314,28 +308,10 @@
     <ClCompile Include="MCU\Components\TComponentListVertical.cpp">
       <Filter>MCU\Components</Filter>
     </ClCompile>
-    <ClCompile Include="MCU\StateControllers\Alarms\Alarms.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MCU\StateControllers\Warnings\Warnings.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Drivers\Leds\Warning\LedWarnings.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="MCU\Parameters\TPrmList.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Drivers\DIN\internal_din.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Source.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MCU\CmdSender\CmdSender.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Drivers\DOUT\internal_dout.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="MCU\Components\ParamListSelector.cpp">
