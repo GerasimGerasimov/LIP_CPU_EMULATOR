@@ -269,9 +269,6 @@
     <ClCompile Include="MCU\Parameters\scaleutils.cpp">
       <Filter>MCU\Parameters</Filter>
     </ClCompile>
-    <ClCompile Include="MCU\Components\HeaderLabel.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
     <ClCompile Include="MCU\Slots\CreateCustomSlot.cpp">
       <Filter>MCU\Slots</Filter>
     </ClCompile>

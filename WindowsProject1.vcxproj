@@ -162,7 +162,6 @@
     <ClCompile Include="Drivers\Resources\os_resources.cpp" />
     <ClCompile Include="MCU\App\app.cpp" />
     <ClCompile Include="MCU\Components\common.cpp" />
-    <ClCompile Include="MCU\Components\HeaderLabel.cpp" />
     <ClCompile Include="MCU\Components\Label.cpp" />
     <ClCompile Include="MCU\Components\LinkedTagLabel.cpp" />
     <ClCompile Include="MCU\Components\LinkLabel.cpp" />
