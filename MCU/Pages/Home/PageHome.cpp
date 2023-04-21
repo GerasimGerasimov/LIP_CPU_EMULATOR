@@ -37,8 +37,8 @@ TVisualObject* TPageHome::getSignalOfFocusedChild() {
 /* TODO в таком виде хранится информация о наполнении страницы
 1, 5N, PF1, U1/RAM/Iexc,
 2, 5N, MA2, U1/RAM/Uexc,
-3, 5N, NF0, U1/RAM/Ist,
-4, 5N, PF1, U1/RAM/Q,
+3, 5N, PF0, U1/RAM/Ist,
+4, 5N, MF1, U1/RAM/Q,
 */
 
 void TPageHome::fillPageContainer(void) {
@@ -50,8 +50,8 @@ void TPageHome::fillPageContainer(void) {
     TagList->AddList({
         new T5N8("PF1", "U1/RAM/Uref/", LabelInit),
         new T5N8("MA2", "U1/RAM/Iref/", LabelInit),
-        new T5N8("NF0", "U1/RAM/UoutAve/", LabelInit),
-        new T5N8("PF2", "U1/RAM/IoutAve/", LabelInit),
+        new T5N8("PF0", "U1/RAM/UoutAve/", LabelInit),
+        new T5N8("MF2", "U1/RAM/IoutAve/", LabelInit),
     });
 }
 
@@ -66,6 +66,12 @@ void TPageHome::SlotUpdate(TSlotHandlerArsg args) {
     for (auto& e : TagList->List) {
         T5N8* tag = (T5N8*)e;
         TParameter* p = (TParameter*)tag->getDataSrc();
+        //TODO T5N8 должен "переварить" число-буквенный код от Параметра в набор битов для передачи по SPI
+        //          т.е. надо как-то отличать число от сообщения (типа "--.--", "-eadr" и какие ещё придумаю)
+        //TODO если число не помещается в 5 знаков (для положительных)
+        //     и в 4 для отрицательных (5-й для знака "-")
+        //     то T5N8 должен вывести символы "много", пусть это будут "_ _ _ _ _" ( пять нижних подчёркиваний)
+        
         tag->Value->setCaption(p->getValue(args, ""));
     }
     Msg::send_message((u32)EventSrc::REPAINT, 0, 0);

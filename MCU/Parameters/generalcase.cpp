@@ -88,9 +88,9 @@ TGenaralCaseRawReturn TGeneralCaseSignal::getRawValue(const TSlotHandlerArsg& ar
 }
 
 std::string TGeneralCaseSignal::validation(const TSlotHandlerArsg& args) {
-	if (args.InputBufValidBytes == 0) return "***.**";
-	if (ParametersUtils::isAddrInvalid(Addr)) return "err.addr";
-	if ((Addr < args.StartAddrOffset) || (Addr > args.LastAddrOffset)) return "out.addr";
+	if (args.InputBufValidBytes == 0) return "--.--";
+	if (ParametersUtils::isAddrInvalid(Addr)) return "-eadr";
+	if ((Addr < args.StartAddrOffset) || (Addr > args.LastAddrOffset)) return "-oadr";
 	return "";
 }
 

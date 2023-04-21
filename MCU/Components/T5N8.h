@@ -11,15 +11,14 @@ class T5N8 : public TVisualObject {
 public:
     virtual bool ProcessMessage(TMessage* m);
     virtual const u16 getHeight(void);
-    T5N8(std::string caption, std::string tag, TLabelInitStructure init);//конструктор
+    T5N8(std::string Format, std::string tag, TLabelInitStructure init);//конструктор
     ~T5N8();//деструктор
     void view(void);//вывести строку на экране
     TLabel* Value;
     const std::string Tag;
     const std::string ComponentName();
 private:
-    TLabel* Caption;
-    TLabel* msu; 
+    std::string format;
 };
 
 #endif
