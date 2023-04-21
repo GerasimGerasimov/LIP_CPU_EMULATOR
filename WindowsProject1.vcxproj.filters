@@ -269,13 +269,7 @@
     <ClCompile Include="MCU\Parameters\scaleutils.cpp">
       <Filter>MCU\Parameters</Filter>
     </ClCompile>
-    <ClCompile Include="MCU\Components\WrappedText.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
     <ClCompile Include="MCU\Components\HeaderLabel.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="MCU\Components\NumericEdit.cpp">
       <Filter>MCU\Components</Filter>
     </ClCompile>
     <ClCompile Include="MCU\Slots\CreateCustomSlot.cpp">
@@ -296,13 +290,7 @@
     <ClCompile Include="MCU\Modbus\AppModbusSlave.cpp">
       <Filter>MCU\Modbus</Filter>
     </ClCompile>
-    <ClCompile Include="MCU\Components\FixedHeader.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
     <ClCompile Include="MCU\Components\TVerticalContainer.cpp">
-      <Filter>MCU\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="MCU\Components\FixedFooter.cpp">
       <Filter>MCU\Components</Filter>
     </ClCompile>
     <ClCompile Include="MCU\Components\TComponentListVertical.cpp">
@@ -312,9 +300,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MCU\Components\ParamListSelector.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="MCU\SetValueSelector\SetValueSelector.cpp">
