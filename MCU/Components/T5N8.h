@@ -17,8 +17,9 @@ public:
     TLabel* Value;
     const std::string Tag;
     const std::string ComponentName();
-private:
     std::string format;
+private:
+    
 };
 
 #endif

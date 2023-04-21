@@ -48,10 +48,10 @@ void TPageHome::fillPageContainer(void) {
     LabelInit.Rect = { 10, 10, 10, 10 };
     LabelInit.focused = false;
     TagList->AddList({
-        new T5N8("PF1", "U1/RAM/Uref/", LabelInit),
-        new T5N8("MA2", "U1/RAM/Iref/", LabelInit),
-        new T5N8("PF0", "U1/RAM/UoutAve/", LabelInit),
-        new T5N8("MF2", "U1/RAM/IoutAve/", LabelInit),
+        new T5N8("A", "U1/RAM/Uref/", LabelInit),
+        new T5N8("%-2.2f", "U1/RAM/Iref/", LabelInit),
+        new T5N8("%-4.0f", "U1/RAM/UoutAve/", LabelInit),
+        new T5N8("%-2.1f", "U1/RAM/IoutAve/", LabelInit),
     });
 }
 
@@ -72,7 +72,7 @@ void TPageHome::SlotUpdate(TSlotHandlerArsg args) {
         //     и в 4 для отрицательных (5-й для знака "-")
         //     то T5N8 должен вывести символы "много", пусть это будут "_ _ _ _ _" ( пять нижних подчёркиваний)
         
-        tag->Value->setCaption(p->getValue(args, ""));
+        tag->Value->setCaption(p->getValue(args, tag->format.c_str()));
     }
     Msg::send_message((u32)EventSrc::REPAINT, 0, 0);
 }
