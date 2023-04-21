@@ -1,20 +1,5 @@
 #include "Router.h"
-#include "PageMainMenu.h"
-#include "PageAlarms.h"
-#include "PageEditValue.h"
 #include "PageHome.h"
-#include "PageBrandNewHome.h"
-#include "PageHelp.h"
-#include "PageWarnings.h"
-#include "PageOperateStatus.h"
-#include "PageBasicSettings.h"
-#include "PageBasicProtectionsSettings.h"
-#include "PageCleanSettings.h"
-#include "PageSensors.h"
-#include "PageNetworkSettings.h"
-#include "PageParameterListEdit.h"
-#include "PagePanelSettings.h"
-#include "PageCalibration.h"
 #include <IniResources.h>
 
 /*TODO В роутере и страницах можно реализовать переходы на закрытие/открытие окна*/
@@ -26,21 +11,7 @@ TPageValueEditEntryData TRouter::PageValueEditEntryData = {"", ""};
 std::map<std::string, TPage*> TRouter::Pages = std::map<std::string, TPage*>();
 
 void TRouter::Init(void) {
-    Pages["Home"] = new TPageBrandNewHome("Home");
-    Pages["Help"] = new TPageHelp("Help");
-    Pages["MainMenu"] = new TPageMainMenu("MainMenu");
-    Pages["Alarms"] = new TPageAlarms("Alarms");
-    Pages["Warnings"] = new TPageWarnings("Warnings");
-    Pages["BasicSettings"] = new TPageBasicSettings("BasicSettings");
-    Pages["EditValue"] = new TPageEditValue("EditValue");
-    Pages["OperateStatus"] = new TPageOperateStatus("OperateStatus");
-    Pages["BasicProtectionsSettings"] = new TPageBasicProtectionsSettings("BasicProtectionsSettings");
-    Pages["CleanSettings"] = new TPageCleanSettings("CleanSettings");
-    Pages["Sensors"] = new TPageSensors("Sensors");
-    Pages["NetWorkSettings"] = new TPageNetworkSettings("NetWorkSettings");
-    Pages["PrmListEdit"] = new TPageParameterListEdit("PrmListEdit");
-    Pages["PanelSettings"] = new TPagePanelSettings("PanelSettings");
-    Pages["CD"] = new TPageCalibration("CD");
+    Pages["Home"] = new TPageHome("Home");
     setInitPage();
 }
 
